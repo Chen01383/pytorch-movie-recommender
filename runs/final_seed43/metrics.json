@@ -1,0 +1,193 @@
+{
+  "Recall@10": 0.06581177164961569,
+  "NDCG@10": 0.228916133873808,
+  "CatalogCoverage@10": 0.11305297651556527,
+  "evaluated_users": 955,
+  "train_catalog_items": 3662,
+  "holdout_positive_users": 1188,
+  "excluded_users_without_eligible_labels": 233,
+  "filter_counts_sequential": {
+    "positive_rows_total": 54452,
+    "excluded_new_user_rows": 10812,
+    "eligible_positive_rows": 41558,
+    "excluded_insufficient_history_rows": 2041,
+    "excluded_new_item_rows": 41
+  },
+  "protocol": "global_time_split; frozen_train_history; full_train_catalog; warm_only",
+  "minimum_train_positives": 5,
+  "positive_rating_threshold": 4,
+  "data_kind": "MovieLens_local",
+  "model": "mf",
+  "genres": false,
+  "device": "cuda",
+  "report_split": "test",
+  "best_epoch": 18,
+  "best_validation_ndcg": 0.14846730743809614,
+  "history": [
+    {
+      "epoch": 1,
+      "mean_bpr_loss": 0.6926890604569641,
+      "validation_ndcg": 0.017813917976858905
+    },
+    {
+      "epoch": 2,
+      "mean_bpr_loss": 0.6057123577758864,
+      "validation_ndcg": 0.11896616226249705
+    },
+    {
+      "epoch": 3,
+      "mean_bpr_loss": 0.3536866551112466,
+      "validation_ndcg": 0.12107371723454796
+    },
+    {
+      "epoch": 4,
+      "mean_bpr_loss": 0.29021598609543625,
+      "validation_ndcg": 0.12150258398916731
+    },
+    {
+      "epoch": 5,
+      "mean_bpr_loss": 0.27177686217767766,
+      "validation_ndcg": 0.12553443509909082
+    },
+    {
+      "epoch": 6,
+      "mean_bpr_loss": 0.25813285296428345,
+      "validation_ndcg": 0.12814362532404447
+    },
+    {
+      "epoch": 7,
+      "mean_bpr_loss": 0.24454661103489436,
+      "validation_ndcg": 0.13093553526023735
+    },
+    {
+      "epoch": 8,
+      "mean_bpr_loss": 0.23399740813807507,
+      "validation_ndcg": 0.13095379085416753
+    },
+    {
+      "epoch": 9,
+      "mean_bpr_loss": 0.22595907976082139,
+      "validation_ndcg": 0.1362830938294741
+    },
+    {
+      "epoch": 10,
+      "mean_bpr_loss": 0.2187662027753086,
+      "validation_ndcg": 0.1380214717938103
+    },
+    {
+      "epoch": 11,
+      "mean_bpr_loss": 0.21220528127738575,
+      "validation_ndcg": 0.13734669095870197
+    },
+    {
+      "epoch": 12,
+      "mean_bpr_loss": 0.20661100361157897,
+      "validation_ndcg": 0.14078998599363554
+    },
+    {
+      "epoch": 13,
+      "mean_bpr_loss": 0.20261921468764998,
+      "validation_ndcg": 0.14289809173940674
+    },
+    {
+      "epoch": 14,
+      "mean_bpr_loss": 0.19811371247855997,
+      "validation_ndcg": 0.14094613291195535
+    },
+    {
+      "epoch": 15,
+      "mean_bpr_loss": 0.19490797419226666,
+      "validation_ndcg": 0.1431829400554476
+    },
+    {
+      "epoch": 16,
+      "mean_bpr_loss": 0.19290620638072012,
+      "validation_ndcg": 0.14594980372831673
+    },
+    {
+      "epoch": 17,
+      "mean_bpr_loss": 0.19012883187207208,
+      "validation_ndcg": 0.1450606482551484
+    },
+    {
+      "epoch": 18,
+      "mean_bpr_loss": 0.18776111592728023,
+      "validation_ndcg": 0.14846730743809614
+    },
+    {
+      "epoch": 19,
+      "mean_bpr_loss": 0.1855270946818986,
+      "validation_ndcg": 0.14669604679038986
+    },
+    {
+      "epoch": 20,
+      "mean_bpr_loss": 0.18409182876984104,
+      "validation_ndcg": 0.14674580459497588
+    }
+  ],
+  "cutoffs": {
+    "valid_start_timestamp": 975768738,
+    "test_start_timestamp": 978133414
+  },
+  "split_rows": {
+    "train": 800164,
+    "valid": 100024,
+    "test": 100021
+  },
+  "config": {
+    "ratings": "data\\ml-1m\\ratings.dat",
+    "movies": null,
+    "demo": false,
+    "genres": false,
+    "architecture": "mf",
+    "dim": 32,
+    "epochs": 20,
+    "batch_size": 1024,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "seed": 43,
+    "device": "cuda",
+    "k": 10,
+    "min_positives": 5,
+    "patience": 4,
+    "threads": 4,
+    "validation_only": false,
+    "out": "runs\\final_seed43"
+  },
+  "torch_version": "2.14.1+cu130",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "cuda_build": "13.0",
+  "gpu_name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "source_sha256": "506d64ca44484487c11dc2d9a28de5c54948213e6b96285e298afe28d6ea4e0f",
+  "movie_metadata_sha256": null,
+  "train_and_evaluation_seconds": 50.57029780000448,
+  "popular_metrics_same_report_split": {
+    "Recall@10": 0.05327329021974859,
+    "NDCG@10": 0.19565291010545022,
+    "CatalogCoverage@10": 0.035226652102676136,
+    "evaluated_users": 955,
+    "train_catalog_items": 3662,
+    "holdout_positive_users": 1188,
+    "excluded_users_without_eligible_labels": 233,
+    "filter_counts_sequential": {
+      "positive_rows_total": 54452,
+      "excluded_new_user_rows": 10812,
+      "eligible_positive_rows": 41558,
+      "excluded_insufficient_history_rows": 2041,
+      "excluded_new_item_rows": 41
+    },
+    "protocol": "global_time_split; frozen_train_history; full_train_catalog; warm_only",
+    "minimum_train_positives": 5,
+    "positive_rating_threshold": 4
+  },
+  "paired_user_bootstrap_vs_popular": {
+    "mean_difference_B_minus_A": 0.03326322376835777,
+    "approx_95pct_user_bootstrap_interval": [
+      0.02404259171032633,
+      0.04329655269750801
+    ],
+    "repeats": 2000,
+    "seed": 43,
+    "scope": "user_sampling_uncertainty_for_fixed_trained_models"
+  }
+}

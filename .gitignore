@@ -1,0 +1,13 @@
+.venv/
+data/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.log
+runs/smoke*/
+runs/demo/
+runs/mf_demo/
+.DS_Store
+Thumbs.db

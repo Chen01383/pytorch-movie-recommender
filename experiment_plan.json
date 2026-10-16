@@ -1,0 +1,22 @@
+{
+  "version": "2026-10-16-v1",
+  "task": "MovieLens 1M implicit-preference top-10 ranking",
+  "architecture": "mf",
+  "validation_dimensions": [16, 32],
+  "selection_seed": 42,
+  "final_seeds": [42, 43, 44],
+  "deployment_seed_fixed_before_test": 42,
+  "epochs": 20,
+  "patience": 4,
+  "batch_size": 1024,
+  "learning_rate": 0.001,
+  "weight_decay": 0.00001,
+  "k": 10,
+  "min_train_positives": 5,
+  "positive_threshold": 4,
+  "selection_rule": "highest best_validation_ndcg; exact ties favor smaller dimension",
+  "protocol": "global time 80/10/10, tied timestamps kept together, frozen train histories, full training catalog, exclude all training-rated items",
+  "uncertainty": "report all three final seeds; user-paired bootstrap on fixed deployment seed 42; do not select weights using test results",
+  "activity_groups_from_training": ["5-19", "20-49", "50+"],
+  "data_source": "https://grouplens.org/datasets/movielens/1m/"
+}

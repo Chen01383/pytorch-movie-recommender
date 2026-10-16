@@ -1,0 +1,33 @@
+{
+  "Recall@10": 0.04724525096687113,
+  "NDCG@10": 0.12290104762326423,
+  "CatalogCoverage@10": 0.03304205352266521,
+  "evaluated_users": 481,
+  "train_catalog_items": 3662,
+  "holdout_positive_users": 1103,
+  "excluded_users_without_eligible_labels": 622,
+  "filter_counts_sequential": {
+    "positive_rows_total": 57812,
+    "eligible_positive_rows": 12206,
+    "excluded_new_user_rows": 45159,
+    "excluded_insufficient_history_rows": 446,
+    "excluded_new_item_rows": 1
+  },
+  "protocol": "global_time_split; frozen_train_history; full_train_catalog; warm_only",
+  "minimum_train_positives": 5,
+  "positive_rating_threshold": 4,
+  "data_kind": "MovieLens_local",
+  "model": "train_positive_count_popularity",
+  "report_split": "validation",
+  "split_rows": {
+    "train": 800164,
+    "valid": 100024,
+    "test": 100021
+  },
+  "cutoffs": {
+    "valid_start_timestamp": 975768738,
+    "test_start_timestamp": 978133414
+  },
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "source_sha256": "506d64ca44484487c11dc2d9a28de5c54948213e6b96285e298afe28d6ea4e0f"
+}

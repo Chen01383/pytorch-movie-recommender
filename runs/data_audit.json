@@ -1,0 +1,28 @@
+{
+  "ratings": 1000209,
+  "unique_users": 6040,
+  "unique_rated_movies": 3706,
+  "rating_distribution": {
+    "1": 56174,
+    "2": 107557,
+    "3": 261197,
+    "4": 348971,
+    "5": 226310
+  },
+  "duplicate_policy": "loader_rejects_duplicate_user_item_pairs",
+  "first_timestamp_utc": "2000-04-25T23:05:32+00:00",
+  "last_timestamp_utc": "2003-02-28T17:49:50+00:00",
+  "split_rows": {
+    "train": 800164,
+    "valid": 100024,
+    "test": 100021
+  },
+  "cutoffs": {
+    "valid_start_timestamp": 975768738,
+    "test_start_timestamp": 978133414
+  },
+  "train_catalog_items": 3662,
+  "train_users_with_at_least_5_positive_items": 5351,
+  "source_sha256": "506d64ca44484487c11dc2d9a28de5c54948213e6b96285e298afe28d6ea4e0f",
+  "note": "Descriptive data audit. This does not evaluate or select a model on test labels."
+}

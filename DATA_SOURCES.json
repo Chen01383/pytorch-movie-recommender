@@ -1,0 +1,8 @@
+{
+  "source_url": "https://files.grouplens.org/datasets/movielens/ml-1m.zip",
+  "checksum_url": "https://files.grouplens.org/datasets/movielens/ml-1m.zip.md5",
+  "official_checksum_text": "MD5 (ml-1m.zip) = c4d9eecfca2ab87c1945afe126590906",
+  "archive_sha256": "a6898adb50b9ca05aa231689da44c217cb524e7ebd39d264c56e2832f2c54e20",
+  "archive_md5": "c4d9eecfca2ab87c1945afe126590906",
+  "ratings_sha256": "506d64ca44484487c11dc2d9a28de5c54948213e6b96285e298afe28d6ea4e0f"
+}

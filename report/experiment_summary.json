@@ -1,0 +1,132 @@
+{
+  "dataset": {
+    "ratings": 1000209,
+    "unique_users": 6040,
+    "unique_rated_movies": 3706,
+    "rating_distribution": {
+      "1": 56174,
+      "2": 107557,
+      "3": 261197,
+      "4": 348971,
+      "5": 226310
+    },
+    "duplicate_policy": "loader_rejects_duplicate_user_item_pairs",
+    "first_timestamp_utc": "2000-04-25T23:05:32+00:00",
+    "last_timestamp_utc": "2003-02-28T17:49:50+00:00",
+    "split_rows": {
+      "train": 800164,
+      "valid": 100024,
+      "test": 100021
+    },
+    "cutoffs": {
+      "valid_start_timestamp": 975768738,
+      "test_start_timestamp": 978133414
+    },
+    "train_catalog_items": 3662,
+    "train_users_with_at_least_5_positive_items": 5351,
+    "source_sha256": "506d64ca44484487c11dc2d9a28de5c54948213e6b96285e298afe28d6ea4e0f",
+    "note": "Descriptive data audit. This does not evaluate or select a model on test labels."
+  },
+  "locked_selection": {
+    "plan_sha256": "d29ffb1448d85552ee4580846d4d4763b2b9e4a2e719175d24d6a2e2455a8dc0",
+    "validation_comparison": [
+      {
+        "dim": 16,
+        "seed": 42,
+        "best_epoch": 20,
+        "validation_ndcg": 0.13790122528481336,
+        "validation_recall": 0.05561094983620552
+      },
+      {
+        "dim": 32,
+        "seed": 42,
+        "best_epoch": 16,
+        "validation_ndcg": 0.148661287976337,
+        "validation_recall": 0.06860504098272552
+      }
+    ],
+    "selected_dim": 32,
+    "deployment_seed": 42,
+    "final_seeds": [
+      42,
+      43,
+      44
+    ],
+    "selection": "validation_only_before_any_final_test_run"
+  },
+  "aggregate": {
+    "Recall@10": {
+      "mean": 0.06575245552183548,
+      "sample_std": 0.0013888294950896072,
+      "popular": 0.05327329021974859
+    },
+    "NDCG@10": {
+      "mean": 0.22869605084388445,
+      "sample_std": 0.003994943974256388,
+      "popular": 0.19565291010545022
+    },
+    "CatalogCoverage@10": {
+      "mean": 0.10677225559803387,
+      "sample_std": 0.008205887056972538,
+      "popular": 0.035226652102676136
+    }
+  },
+  "final_seeds": [
+    {
+      "seed": 42,
+      "best_epoch": 16,
+      "Recall@10": 0.06711067661845242,
+      "NDCG@10": 0.23257640404027669,
+      "CatalogCoverage@10": 0.10977607864554888
+    },
+    {
+      "seed": 43,
+      "best_epoch": 18,
+      "Recall@10": 0.06581177164961569,
+      "NDCG@10": 0.228916133873808,
+      "CatalogCoverage@10": 0.11305297651556527
+    },
+    {
+      "seed": 44,
+      "best_epoch": 14,
+      "Recall@10": 0.06433491829743834,
+      "NDCG@10": 0.22459561461756863,
+      "CatalogCoverage@10": 0.09748771163298744
+    }
+  ],
+  "deployment_seed": 42,
+  "deployment_bootstrap": {
+    "mean_difference_B_minus_A": 0.03692349393482646,
+    "approx_95pct_user_bootstrap_interval": [
+      0.02771882791812894,
+      0.04606650205361635
+    ],
+    "repeats": 2000,
+    "seed": 42,
+    "scope": "user_sampling_uncertainty_for_fixed_trained_models"
+  },
+  "latency": {
+    "device": "cpu",
+    "torch_threads": 1,
+    "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+    "requests": 200,
+    "warmup": 20,
+    "concurrency": 1,
+    "k": 10,
+    "unique_users": 100,
+    "p50_ms": 1.1938,
+    "p95_ms": 1.304,
+    "min_ms": 1.0368,
+    "max_ms": 1.6302,
+    "includes": "user encoding, seen filtering, full-catalog scores, stable ranking, named result creation",
+    "excludes": "model/dataset loading, HTTP, disk IO, network, GUI",
+    "item_vectors": "cached",
+    "source_sha256": "506d64ca44484487c11dc2d9a28de5c54948213e6b96285e298afe28d6ea4e0f"
+  },
+  "trained_on": {
+    "torch": "2.14.1+cu130",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "cuda": "13.0"
+  },
+  "evaluation_scope": "warm users with >=5 train positive items, warm train-catalog items, frozen train history"
+}

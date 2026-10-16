@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "unit_tests_passed": 13,
+  "source_sha256": "506d64ca44484487c11dc2d9a28de5c54948213e6b96285e298afe28d6ea4e0f",
+  "final_seeds_verified": [
+    42,
+    43,
+    44
+  ],
+  "deployment_seed": 42,
+  "known_demo_user": 635,
+  "known_user_recommendations": 10,
+  "new_user_fallback": "passed",
+  "seen_filtering": "passed",
+  "repeatability": "passed",
+  "torch_version": "2.14.1+cu130",
+  "cuda_available": true
+}

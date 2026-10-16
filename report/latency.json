@@ -1,0 +1,18 @@
+{
+  "device": "cpu",
+  "torch_threads": 1,
+  "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+  "requests": 200,
+  "warmup": 20,
+  "concurrency": 1,
+  "k": 10,
+  "unique_users": 100,
+  "p50_ms": 1.1938,
+  "p95_ms": 1.304,
+  "min_ms": 1.0368,
+  "max_ms": 1.6302,
+  "includes": "user encoding, seen filtering, full-catalog scores, stable ranking, named result creation",
+  "excludes": "model/dataset loading, HTTP, disk IO, network, GUI",
+  "item_vectors": "cached",
+  "source_sha256": "506d64ca44484487c11dc2d9a28de5c54948213e6b96285e298afe28d6ea4e0f"
+}

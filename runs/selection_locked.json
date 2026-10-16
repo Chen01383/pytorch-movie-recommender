@@ -1,0 +1,27 @@
+{
+  "plan_sha256": "d29ffb1448d85552ee4580846d4d4763b2b9e4a2e719175d24d6a2e2455a8dc0",
+  "validation_comparison": [
+    {
+      "dim": 16,
+      "seed": 42,
+      "best_epoch": 20,
+      "validation_ndcg": 0.13790122528481336,
+      "validation_recall": 0.05561094983620552
+    },
+    {
+      "dim": 32,
+      "seed": 42,
+      "best_epoch": 16,
+      "validation_ndcg": 0.148661287976337,
+      "validation_recall": 0.06860504098272552
+    }
+  ],
+  "selected_dim": 32,
+  "deployment_seed": 42,
+  "final_seeds": [
+    42,
+    43,
+    44
+  ],
+  "selection": "validation_only_before_any_final_test_run"
+}
